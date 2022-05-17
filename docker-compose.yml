@@ -75,7 +75,7 @@ services:
       DATABASE_USER: postgres
       DATABASE_NAME: todos_development
       REDIS_URL: redis://redis:6379/0
-      RAILS_LOG_TO_STDOUT: true
+      RAILS_LOG_TO_STDOUT: 'true'
       CORS_DOMAINS: '*'
     depends_on:
       db:
