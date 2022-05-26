@@ -69,7 +69,8 @@ services:
     build:
       context: .
       dockerfile: .dockerdev/frontend/Dockerfile.prod
-    command: [ "bin/sh", -c, "nginx -g 'daemon off;'" ]
+      args:
+        REACT_APP_API_URL: 'http://localhost:3000'
     ports:
       - 80:80
     depends_on:
